@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+body{
+  height: 100%;
+}
+
+.content{
+  width: 100% !important;
+  height: 100% !important;
+}
