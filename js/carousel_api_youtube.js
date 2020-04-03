@@ -21,8 +21,6 @@ function onYouTubeIframeAPIReady() {
       console.log(id);
 
       player = new YT.Player(element.id, {
-        height: '360',
-        width: '640',
         videoId: id,
         playerVars: { 'origin': 'http://localhost:3000' },
         events: {
