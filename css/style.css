@@ -12,3 +12,8 @@ body{
   width: 100% !important;
   height: 100% !important;
 }
+.carousel-video{
+  height: 40vh;
+  object-fit: cover;
+  width: 100%;
+}
