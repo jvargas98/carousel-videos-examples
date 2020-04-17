@@ -12,7 +12,7 @@ function onYouTubeIframeAPIReady() {
 
   elements_array.forEach(element => {
     if (element.hasAttribute("video_id")) {
-      id = element.getAttribute("video_id")
+      let id = element.getAttribute("video_id")
       let player = new YT.Player(element.id, {
         videoId: id,
         events: {
