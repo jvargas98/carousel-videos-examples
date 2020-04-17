@@ -9,7 +9,10 @@ function onYouTubeIframeAPIReady() {
       players.push(player);
     };
   });
+<<<<<<< HEAD
   console.log(players);
+=======
+>>>>>>> c77429ea2d4c3b19525a04a319a08340139ee617
 }
 
 function createPlayer(video_id, player_id) {
@@ -32,7 +35,12 @@ function onPlayerStateChange(event) {
       break;
   }
 }
+<<<<<<< HEAD
 $(document).ready(function () {
+=======
+
+$(document).on("turbolinks:load", function () {
+>>>>>>> c77429ea2d4c3b19525a04a319a08340139ee617
   $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
     if (isIframe()) {
       let player_id = getIdPlayer(element[0]);
@@ -43,7 +51,10 @@ $(document).ready(function () {
   $('#carouselExampleIndicators').bind('slide.bs.carousel', function () {
     if (isIframe()) {
       let player_id = getIdPlayer(element[0]);
+<<<<<<< HEAD
       console.log(players[player_id]);
+=======
+>>>>>>> c77429ea2d4c3b19525a04a319a08340139ee617
       players[player_id].pauseVideo();
       startCarousel();
       if (players[player_id].getPlayerState() == 0) {
@@ -53,7 +64,10 @@ $(document).ready(function () {
   });
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c77429ea2d4c3b19525a04a319a08340139ee617
 function getIdPlayer(element) {
   return element.id.slice(-1) - 1;
 }
