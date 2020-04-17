@@ -9,6 +9,7 @@ function onYouTubeIframeAPIReady() {
       players.push(player);
     };
   });
+  console.log(players);
 }
 
 function createPlayer(video_id, player_id) {
@@ -32,7 +33,8 @@ function onPlayerStateChange(event) {
   }
 }
 
-$(document).on("turbolinks:load", function () {
+$(document).ready(function () {
+
   $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
     if (isIframe()) {
       let player_id = getIdPlayer(element[0]);
@@ -43,6 +45,7 @@ $(document).on("turbolinks:load", function () {
   $('#carouselExampleIndicators').bind('slide.bs.carousel', function () {
     if (isIframe()) {
       let player_id = getIdPlayer(element[0]);
+      console.log(players[player_id]);
       players[player_id].pauseVideo();
       startCarousel();
       if (players[player_id].getPlayerState() == 0) {
